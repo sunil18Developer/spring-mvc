@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" th:content="${metaDescription}" />
+    <meta name="keywords" th:content="${metaKeywords}" />
+    <meta name="author" th:content="${metaAuthor}" />
+    <meta
+      name="robots"
+      th:content="${metaRobots} ? 'index, follow' : 'noindex, nofollow'"
+    />
+    <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon" />
+
+    <title th:text="${title}">Default Title</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <meta property="og:title" th:content="${ogTitle} ? ${ogTitle} : ${title}" />
+    <meta property="og:description" th:content="${ogDescription}" />
+    <meta property="og:image" th:content="${ogImage}" />
+    <meta property="og:url" th:content="${ogUrl}" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" th:content="${twitterTitle}" />
+    <meta name="twitter:description" th:content="${twitterDescription}" />
+    <meta name="twitter:image" th:content="${twitterImage}" />
+    <meta name="twitter:url" th:content="${twitterUrl}" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" th:href="${canonicalUrl}" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+</html>

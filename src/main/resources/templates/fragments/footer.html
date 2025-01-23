@@ -1,0 +1,48 @@
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5>About Us</h5>
+                <p>
+                    We are a leading company committed to providing exceptional services. Contact us for inquiries or more details about our offerings.
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/}" class="text-white text-decoration-none">Home</a></li>
+                    <li><a th:href="@{/about}" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a th:href="@{/services}" class="text-white text-decoration-none">Services</a></li>
+                    <li><a th:href="@{/contact}" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4">
+                <h5>Follow Us</h5>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-white me-3">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="text-white me-3">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-white me-3">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-white">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col text-center">
+                <p class="mb-0">
+                    &copy; <span th:text="${#dates.format(today, 'yyyy')}"></span> Your Company Name. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
